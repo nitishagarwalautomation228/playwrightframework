@@ -1,0 +1,21 @@
+[
+{
+    "testCaseName": "Positive Login test",
+    "run" : true,
+    "retries" : 2,
+    "data" : {
+        "username": "tomsmith",
+        "password": "SuperSecretPassword!"
+    }
+},
+{
+    "testCaseName": "Negative test scenario",
+    "run" : false,
+    "retries" : 2,
+    "data" : {
+        "username": "user",
+        "password": "wrongpassword"
+    }
+}
+
+]
