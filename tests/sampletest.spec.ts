@@ -9,9 +9,7 @@ test.describe("Login test", ()=> {
     let testRunner:TestRunner = new TestRunner();;
 
 testRunner.shouldRun("Positive Login test") &&
-test(`${testRunner.getTestCaseName()}`, async ({ page }, testinfo,) => {
-    testinfo.retry = testRunner.getRetries()?? 0;
-    
+test(`${testRunner.getTestCaseName()}`, async ({ page }, testinfo) => { 
     logger = new Logger(testinfo.title)
     const login = new LoginPage(page, logger);
     await page.goto("/login");
@@ -19,12 +17,10 @@ test(`${testRunner.getTestCaseName()}`, async ({ page }, testinfo,) => {
  
     const message = await login.getFlashMessage();
     await login.checkForMessage("You logged into a secure area!");
-});
+})
 
 testRunner.shouldRun("Negative Login test") &&
 test(`${testRunner.getTestCaseName()}`, async ({ page }, testinfo) => {
-    testinfo.retry = testRunner.getRetries()?? 0;
-    
     logger = new Logger(testinfo.title)
     const login = new LoginPage(page, logger);
 

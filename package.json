@@ -12,6 +12,7 @@
     "@types/node": "^22.15.3"
   },
   "dependencies": {
+    "allure-playwright": "^3.2.1",
     "typescript": "^5.8.3"
   }
 }

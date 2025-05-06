@@ -16,7 +16,9 @@ export default defineConfig({
   fullyParallel: true,
   retries: 0,
   workers: 1,
-  reporter: [['html', {open: "on-failure"}]],
+  reporter: [['list'],
+    ['allure-playwright'],
+    ['html', {open: "on-failure"}]],
   use: {
     baseURL: 'https://the-internet.herokuapp.com',
     trace: 'on-first-retry',

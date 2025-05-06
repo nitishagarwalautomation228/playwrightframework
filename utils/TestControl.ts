@@ -1,13 +1,9 @@
-
 import * as fs from 'fs';
 
-
-import * as fs from 'fs';
 
 interface TestRun {
     testCaseName: string;
     run: boolean;
-    retries?: number;
     data: { [key: string]: string };  
 }
 
@@ -34,10 +30,6 @@ export class TestRunner {
 
     public getTestCaseName():any{
         return this.data[this.position]["testCaseName"];
-    }
-
-    public getRetries():any{
-        return this.data[this.position]["retries"];
     }
 
     public getTestData(data:string):string{
