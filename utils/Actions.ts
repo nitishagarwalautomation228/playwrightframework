@@ -103,6 +103,11 @@ export class MyActions {
 
     async waitForVisible(locator: Locator, numberOfSeconds: number) {
         await locator.waitFor({ state: "visible", timeout: numberOfSeconds * 1000 });
-        this.logger.info(`Waited for ${numberOfSeconds}s until element became visible`);
+        this.logger.info(`Using maximum wait of ${numberOfSeconds}s until element became visible`);
+    }
+
+    async waitForClickable(locator: Locator, numberOfSeconds: number) {
+        await locator.click({ trial: true, timeout: numberOfSeconds * 1000 });
+        this.logger.info(`Using maximum wait of ${numberOfSeconds}s until element became clickable`);
     }
 }

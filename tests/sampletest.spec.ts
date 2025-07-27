@@ -26,7 +26,7 @@ test(`${testRunner.getTestCaseName()}`, async ({ page }, testinfo) => {
 
     await page.goto("/login");
     await login.login("wronguser", "wrongpass");
-
+    
     const message = await login.getFlashMessage();
     await login.checkForMessage("Your username is invalid!");
 });

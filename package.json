@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "run-tests": "ts-node ./utils/runner.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
   },
   "dependencies": {
     "allure-playwright": "^3.2.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }

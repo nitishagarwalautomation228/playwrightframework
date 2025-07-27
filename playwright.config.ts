@@ -27,6 +27,9 @@ export default defineConfig({
     viewport: {width: 1920, height: 1080},
     screenshot: "on",
     acceptDownloads: true,
-    
+    launchOptions: {
+      headless: true,
+    }
   },
+  
 });
